@@ -1,0 +1,193 @@
+\documentclass{beamer}
+
+% Tema e estilo
+\usetheme{Darmstadt}
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+
+% Idioma e codificação
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+
+% Pacotes adicionais
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage[algoruled,longend]{algorithm2e}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{ragged2e}
+\usepackage{scalefnt}
+
+% Estilo TikZ
+\tikzstyle{block}=[draw opacity=0.7,line width=2.0cm]
+
+% Remover ícones de navegação
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{footline}{
+  \leavevmode
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.25cm,dp=0.3cm,leftskip=0.5cm,rightskip=0.5cm]{author in head/foot}
+    \hbox to \paperwidth{%
+      \raisebox{-0.35cm}{\includegraphics[height=0.6cm]{Fig/cefet.png}}%
+      \hfill
+      \raisebox{-0.1cm}{\scriptsize Slide \insertframenumber{} de \inserttotalframenumber}%
+      \hspace{0.9cm}%
+    }%
+  \end{beamercolorbox}
+}
+
+
+% Título e informações
+\title[Inteligência Artificial]{Título do Trabalho}
+\author[Tiago Alves de Oliveira]{Aluno \\Orientador: Nome do Orientador \\Coorientador: Nome do Coorientador}
+\date{\today}
+
+%--------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+% Slide de título com imagem acima (sem usar figure desnecessariamente)
+\begin{frame}[plain]
+    \begin{center}
+        \includegraphics[height=2cm]{Fig/cefetmg.jpg}
+    \end{center}
+    \titlepage
+\end{frame}
+
+%--------------------------------------------------------------------------------------------------------------------------
+\section{Recomendações}
+\begin{frame}{Orientações Importantes}
+    \begin{itemize}
+        \item Esse material foi elaborado tão somente como uma referência para a apresentação do projeto de TCC, podendo ser convenientemente adaptado pelo aluno e seu orientador;
+        \item Sugere-se que a apresentação seja dimensionada pela relação de 1 slide para cada 1 minuto do tempo disponível;
+        \item Evite excesso de texto, coloque tópicos para direcionar e lembrar o assunto mais importante que deseja abordar (observe fonte de letras e espaçamento);       
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Orientações Importantes}
+    \begin{itemize}
+        \item Lembre-se que numa apresentação, o uso de figuras, quadros e tabelas favorece uma interpretação mais adequada;
+        \item Finalmente, muito cuidado na expressão escrita e emprego das normas técnicas A apresentação oral deve durar de 20 minutos. Na sequência cada examinador poderá usar um tempo para avaliação.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Dicas para apresentação…}
+    Para uma apresentação bem-sucedida, lembre-se sempre:
+    \begin{itemize}
+        \item Releia os slides - Passe, repasse e repita. Examine os títulos, os alinhamentos, as ilustrações. Não há nada torto ou deslocado? Algum texto ilegível? Talvez sobreposto? A ordem está correta? Todo slide tem um título enfatizando a sua idéia central? Após corrigir… releia mais uma vez!
+        \item Ensaie - Pratique sua apresentação, sozinho a princípio, e depois para um pequeno grupo, se você puder. Peça para alguém se posicionar bem longe e avaliar se consegue ler seus slides. Use um relógio e cronômetro quanto tempo você passa em cada slide - e tente deslocar o ponto de equilíbrio, de modo a reservar mais tempo para os slides mais importantes no contexto da sua apresentação. Quando terminar de ensaiar, ensaie de novo!       
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Dicas para apresentação…}
+    Para uma apresentação bem-sucedida, lembre-se sempre:
+    \begin{itemize}
+        \item Atenção aos slides iniciais - É nos slides iniciais que você conquista ou joga fora a atenção da banca - começar um texto ou apresentação é uma arte em si. Capriche especialmente no visual deles, e se esforce para memorizá-los (bem como os demais fatos relacionados ao tema deles) de forma destacada. Vale a pena.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Cuidado com ....}
+    \begin{itemize}
+        \item Gestos e/ou movimento exagerados ou conflitantes.
+        \item Monotonia.
+        \item Excesso ou falta de formalidade: procure adequar o "tom" da apresentação ao público alvo.
+        \item Uso inadequado ou mistura de registros e níveis lingüísticos (gíria, linguagem chula etc.).
+        \item Uso do clichês, lugares comuns e frases feitas, a não ser que seja intencional.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Ainda...}
+    \begin{itemize}
+        \item Não se esqueça de que a banca já leu o seu trabalho, não é necessário e nem recomendável entrar em detalhes.
+        \item Mantenha uma postura profissional diante da banca, tratando os professores com respeito.
+        \item Cuidado para não ficar na frente da TELA enquanto fala, a banca tem que ler o que está escrito.
+        \item Vista-se como se fosse a uma entrevista de emprego e não à praia.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Modelo dos Slides}
+    \begin{itemize}
+        \item Modelo dos slides
+        \item Não esqueça de apagar essa seção e deixar somente a abaixo.
+    \end{itemize}
+\end{frame}
+
+\section{Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG Campus Divinópolis - Curso de Engenharia de Computação}
+
+\begin{frame}{Sumário (opcional)}
+    \small
+    \begin{itemize}
+        \item Introdução
+        \item Objetivos
+        \item Fundamentação Teórica
+        \item Metodologia
+        \item Resultados Esperados
+        \item Conclusão
+        \item Referências
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}
+    \small
+    \begin{itemize}
+        \item Apresentação do Tema / Posicionamento de Contexto
+        \item Colocação objetiva do problema e apresentação da questão da pesquisa
+        \item Justificativas / Motivação
+        \item Para melhor detalhamento, “quebre” os assuntos em mais slides 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Objetivos}
+    \small
+    \begin{itemize}
+        \item Objetivo Principal
+        \begin{itemize}
+            \item .....
+        \end{itemize}
+        \item Objetivos Específicos
+        \begin{itemize}
+            \item .....
+            \item .....
+        \end{itemize}
+    \end{itemize}  
+\end{frame}
+
+\begin{frame}{Fundamentação Teórica ou Materiais e Métodos}
+    \small
+    \begin{enumerate}
+        \item Caracterização do objeto de estudo
+        \item Posicionamento do trabalho segundo seus fins (objetivos) e meios (procedimentos técnicos adotados)
+        \item Planejamento da coleta de dados (universo e amostra, fontes, instrumentos e procedimentos)
+        \item Planejamento da análise de dados
+        \item Sempre que necessário, “quebre” os assuntos (sub-itens) em slides distintos
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Metodologia}
+    \small
+    \begin{itemize}
+        \item Descrever aqui como é metodologia do seu trabalho
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Resultados Esperados}
+    \begin{itemize}
+        \item Descrever os resultados que se espera com a pesquisa
+        \item Use gráficos ou imagens de protótipo
+        \item Apresente comparações com estudos anteriores ou benchmarks
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Referências}
+    \begin{itemize}
+        \item Não é preciso  colocar aqui “todas” as referências, mas apenas aquelas consideradas fundamentais para o seu trabalho
+        \item Use rigorosamente as normas da ABNT
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Slide Opcional}
+    \begin{itemize}
+        \item Nesse slide você pode colocar uma palavra de agradecimento e um e-mail para contato.
+    \end{itemize}
+\end{frame}
+\end{document}
